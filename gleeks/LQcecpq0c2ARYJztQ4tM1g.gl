@@ -4,7 +4,7 @@ GetRecentsteGpsSyncRequestsHandler- getLatest(count) ->+ GpsSyncRequestRepositor
 GpsSyncRequestRepository- syncRequests ->- GetRecentsteGpsSyncRequestsHandler
 GetRecentsteGpsSyncRequestsHandler- syncRequests ->- QueryBus
 QueryBus- syncRequests ->- GpsSyncRequestsVerwerken (cron)
-GpsSyncRequestsVerwerken (cron)- SyncRequestsVerwerken ->+ CommandBus
+GpsSyncRequestsVerwerken (cron)- SyncRequestsVerwerken -> CommandBus
 CommandBus- __invoke(syncRequests) -> SyncRequestsVerwerkenHandler
 SyncRequestsVerwerkenHandler- GetGpsMetingen(DateTimeRange) ->+ OnntrackApiClient
 OnntrackApiClient- GpsMetingen ->- SyncRequestsVerwerkenHandler
