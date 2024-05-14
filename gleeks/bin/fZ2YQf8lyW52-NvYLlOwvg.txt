@@ -1,1 +1,1 @@
-{"name":"New Diagram","configuration":{"orientation":"topdown","doctype":1,"theme":"default"},"timeStamp":"2024-05-14T12:11:22.755Z","doctype":1}
+{"name":"New Diagram","configuration":{"orientation":"topdown","doctype":3,"theme":"neutral"},"timeStamp":"2024-05-14T12:39:31.517Z","doctype":3}

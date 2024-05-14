@@ -1,1 +1,7 @@
-test
+Frontend- Request nieuwe Gps Metingen ->+ GraphQL Resolver
+GraphQL Resolver- GetNieuweGpsMetingen ->+ GetNieuweGpsMetingenService
+GetNieuweGpsMetingenService- GetGpsMetingen ->+ OnntrackApiClient
+OnntrackApiClient- GpsMetingen ->- GetNieuweGpsMetingenService
+GetNieuweGpsMetingenService- store -> GpsMetingenRepository
+GetNieuweGpsMetingenService- GpsMetingen ->- GraphQL Resolver
+GraphQL Resolver- Coordinaten ->- Frontend
