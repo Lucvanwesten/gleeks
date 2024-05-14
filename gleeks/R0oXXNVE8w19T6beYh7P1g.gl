@@ -1,0 +1,3 @@
+GpsSyncRequestsIndienenVoorLaatsteMinuut (cron)- GpsSyncRequestsIndienen ->CommandBus
+CommandBus- __invoke() ->GpsSyncRequestsIndienenHandler
+GpsSyncRequestsIndienenHandler- store(syncRequests) -> GpsSyncRequestRepository
