@@ -1,0 +1,21 @@
+AggregateRoot:interface
+
+OngediertebestrijderDagPlanning
+- id: UuidInterface
+- ongediertebestrijderId:  int
+- afspraken: array
+- eindWerkDag: DateTimeImmutable
+
+Afspraak
+
+
+Locatie
+
+
+AfspraakDateTimeRange
+
+
+AggregateRoot-.-*>OngediertebestrijderDagPlanning
+OngediertebestrijderDagPlanning--<*>Afspraak
+Afspraak--<*>Locatie
+Afspraak--<*>AfspraakDateTimeRange
