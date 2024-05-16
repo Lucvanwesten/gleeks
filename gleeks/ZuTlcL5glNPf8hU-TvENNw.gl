@@ -1,0 +1,31 @@
+AggregateRoot:interface
+
+OngediertebestrijderDagPlanning
+	- id: UuidInterface
+	- ongediertebestrijderId:  int
+	- afspraken: array
+	- eindWerkDag: DateTimeImmutable
+
+Afspraak
+	- id: UuidInterface
+	- locatie: Locatie
+	- geplandeTijd: AfspraakDateTimeRange
+	- verwachteTijd: AfspraakDateTimeRange
+	- werkelijkeStartTijd: DateTimeImmutable
+	- werkelijkeEindTijd: DateTimeImmutable
+	- opdrachtId: int
+	- afgevinkt: bool
+	- valtBuitenWerktijd: bool
+
+Locatie
+	+ latitude: string
+	+ longitude: string
+
+AfspraakDateTimeRange
+	+ start: DateTimeImmutable
+	+ eind: DateTimeImmutable
+
+AggregateRoot-.-*>OngediertebestrijderDagPlanning
+OngediertebestrijderDagPlanning--<*>Afspraak
+Afspraak--<*>Locatie
+Afspraak--<*>AfspraakDateTimeRange

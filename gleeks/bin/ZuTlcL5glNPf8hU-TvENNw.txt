@@ -1,0 +1,1 @@
+{"name":"New Diagram","configuration":{"orientation":"rightleft","doctype":4,"theme":"neutral"},"timeStamp":"2024-05-16T08:33:51.765Z","doctype":4}
