@@ -1,0 +1,8 @@
+Frontend- Request nieuwe Gps Metingen ->+ GraphQL Resolver
+GraphQL Resolver- GetNieuwsteGpsMeting() ->+ QueryBus
+QueryBus- invoke() ->+ GetNieuwsteGpsMetingHandler
+GetNieuwsteGpsMetingHandler- GetLatestVoorVoertuig(id) ->+ GpsMetingRepository
+GpsMetingRepository- GpsMeting ->- GetNieuwsteGpsMetingHandler
+GetNieuwsteGpsMetingHandler- GpsMeting ->- QueryBus
+QueryBus- GpsMeting ->- GraphQL Resolver
+GraphQL Resolver- Coordinaten ->- Frontend
